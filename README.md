@@ -16,7 +16,7 @@ To **create** your own hats, you will need to edit the base64 string of the `HAT
 
 Your workflow can vary, but mine is as follows:
 
-### Editing the spritsheet + getting the base64 string:
+### Editing the spritesheet + getting the base64 string:
 
 1. Open up the `hats-spritesheet-base.png` file in this repository in any photo editor
    - photopea.com is a great browser-based option
@@ -44,4 +44,4 @@ Your workflow can vary, but mine is as follows:
 3. Edit the `HATS` const to include a new custom key-value pair for your hat, corresponding to wherever it is in the spritesheet.
    - e.g. if you added a new hat on the right-most side of the spritesheet, then your new key-value pair should be at the end of the object
 4. Edit the `HAT_METADATA` const to reference the new key you made in `HATS`, and then add the name and description that will be rendered in the Wardrobe window
-5. Restart obsidian, and enjoy a new unlockable!
+5. Restart Obsidian, and enjoy a new unlockable!
