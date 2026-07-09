@@ -1259,6 +1259,7 @@ module.exports = class PocketBird extends Plugin {
         CORDOVAN_HAT: "cordovan-hat",
         SANTA_HAT: "santa-hat",
         CAT_EARS: "cat-ears",
+        TANGERINE: "tangerine",
       };
 
       /** @type {{ [hatId: string]: { name: string, description: string } }} */
@@ -1325,6 +1326,10 @@ module.exports = class PocketBird extends Plugin {
         [HAT.CAT_EARS]: {
           name: "Cat Ears",
           description: "Chirp chirp- I mean, meow!",
+        },
+        [HAT.TANGERINE]: {
+          name: "Tangerine",
+          description: "Living the cabybara life.",
         },
       };
 

@@ -13,7 +13,7 @@ In this repository you will find my WIP custom hats:
 
 ## Making a New Hat
 
-To **create** your own hats, you will need to edit the base64 string of the `HATS_SPRITE_SHEET` const in `main.js`, and then modify the `HATS` and `HAT_METADATA` objects to reference your new hat. An example of one such change can be found at [commit f7e275b](https://github.com/cyanliu/pocket-bird-hats/commit/f7e275b6c82f17bf348f0cffddc9459241eb5816).
+To **create** your own hats, you will need to edit the base64 string of the `HATS_SPRITE_SHEET` const, and then modify the `HATS` and `HAT_METADATA` objects to reference your new hat, all in `main.js`. An example of one such change can be found at [commit f7e275b](https://github.com/cyanliu/pocket-bird-hats/commit/f7e275b6c82f17bf348f0cffddc9459241eb5816).
 
 Your workflow can vary, but mine is as follows:
 
