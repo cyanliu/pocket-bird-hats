@@ -1,6 +1,5 @@
 # Custom hats for your pocket bird
-
-<img src="img/hat-spritesheet-custom.png" height="36" style="  image-rendering: pixelated;"/>
+![custom](img/hat-spritesheet-custom.png)
 
 This is a companion repo for the [PB-Obsidian-Releases](https://github.com/idreesinc/PB-Obsidian-Releases) repository, and provides instructions for how to add custom hats to your existing local installation of [pocket-bird on Obsidian](https://community.obsidian.md/plugins/pocket-bird).
 
@@ -8,7 +7,7 @@ In this repository you will find my WIP custom hats:
 
 - `main.js` - a copy of the main.js from the plugin, but with my custom nonsense (so far, just a santa hat and cat ears)
 - `img/hat-spritesheet-base.png` - the png version of the base spritesheet from pocket-bird
-- `img/hat-spritesheet.png` - the png version of the spritesheet but with my custom nonsense (so far, just a santa hat and cat ears)
+- `img/hat-spritesheet-custom.png` - the png version of the spritesheet but with my custom nonsense (so far, just a santa hat and cat ears)
 - `img/ref_*.png files` - just images that are used here in the readme documentation
 
 ## Making a New Hat
@@ -24,7 +23,7 @@ Your workflow can vary, but mine is as follows:
 2. Expand the canvas size by 12 additional pixels to create room on the right side
    - The right side is just my preference, you could put it whereever as long as each hat sits within a 12x12 pixel area
 
-     ![placement](img/ref_spritesheet-limit.png)
+     <img src="img/ref_spritesheet-limit.png" height="180px"/>
 
 3. Draw a new hat in this 12x12 px space! 🎩
    - The following picture depicts where the 12x12 area will render on the bird
