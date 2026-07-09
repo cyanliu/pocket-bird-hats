@@ -12,7 +12,7 @@ In this repository you will find my WIP custom hats:
 
 ## Making a New Hat
 
-To **create** your own hats, you will need to edit the base64 string of the `HATS_SPRITE_SHEET` const in `main.js`.
+To **create** your own hats, you will need to edit the base64 string of the `HATS_SPRITE_SHEET` const in `main.js`, and then modify the `HATS` and `HAT_METADATA` objects to reference your new hat.
 
 Your workflow can vary, but mine is as follows:
 
@@ -40,7 +40,7 @@ Your workflow can vary, but mine is as follows:
 
 1. Open the main.js file used by your local installation of pocket-bird
    - e.g. Options > Community Plugins > Installed Plugins > click on the little folder icon
-2. Replace the `HATS_SPRITE_SHEET` const with your new base64 value
+2. Replace the `HATS_SPRITE_SHEET` const with your new base64 value, including the `data:image/png;base64,` prefix.
 3. Edit the `HATS` const to include a new custom key-value pair for your hat, corresponding to wherever it is in the spritesheet.
    - e.g. if you added a new hat on the right-most side of the spritesheet, then your new key-value pair should be at the end of the object
 4. Edit the `HAT_METADATA` const to reference the new key you made in `HATS`, and then add the name and description that will be rendered in the Wardrobe window
