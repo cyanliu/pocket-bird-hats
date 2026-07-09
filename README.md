@@ -6,9 +6,9 @@ This is a companion repo for the [PB-Obsidian-Releases](https://github.com/idree
 
 In this repository you will find my WIP custom hats:
 
-- `main.js` - a copy of the main.js from the plugin, but with my custom nonsense (so far, just a santa hat, cat ears, and tangerine)
+- `main.js` - a copy of the main.js from the plugin, but with my custom nonsense (so far, just a santa hat, cat ears, tangerine, and dubious food)
 - `img/hat-spritesheet-base.png` - the png version of the base spritesheet from pocket-bird
-- `img/hat-spritesheet-custom.png` - the png version of the spritesheet, but with my custom nonsense (so far, just a santa hat, cat ears, and tangerine)
+- `img/hat-spritesheet-custom.png` - the png version of the spritesheet, but with my custom nonsense (so far, just a santa hat, cat ears, tangerine, and dubious food)
 - `img/ref_*.png files` - just images that are used here in the readme documentation
 
 ## Making a New Hat

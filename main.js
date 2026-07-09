@@ -1260,6 +1260,7 @@ module.exports = class PocketBird extends Plugin {
         SANTA_HAT: "santa-hat",
         CAT_EARS: "cat-ears",
         TANGERINE: "tangerine",
+        DUBIOUS: "dubious-food"
       };
 
       /** @type {{ [hatId: string]: { name: string, description: string } }} */
@@ -1330,6 +1331,10 @@ module.exports = class PocketBird extends Plugin {
         [HAT.TANGERINE]: {
           name: "Tangerine",
           description: "Living the cabybara life.",
+        },
+        [HAT.DUBIOUS]: {
+          name: "Dubious Food",
+          description: "It's too gross to even look at, let alone wear. A bizarre smell issues forth from this heap",
         },
       };
 
@@ -3019,7 +3024,7 @@ module.exports = class PocketBird extends Plugin {
       const FEATHER_SPRITE_SHEET =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAARhJREFUWIXtlbENwjAQRf8hSiZIRQ+9WQNRUFIAKzACBSsAA1Ag1mAABqCCBomG3hQQ9OMEx4ZDNH5SikSJ3/fZ5wCJRCKRSPwZ0RzMWmtLAhGvQyUAi9mXP/aFaGjJRQQiguHihMvcFMJUVUYlAMuHixPGy4en1WmVQqgHYHkuZjiEj6a2/LjtYzTY0eiZbgC37Mxh1UN3sn/dr6cCz/LHB/DJj9s+2oMdbtdz6TtfFwQHcMvOInfmQNjsgchNWLXmdfK6gyioAu/6uKrsm1kWLAciKuCuey5nYuXAh234bdmZ6INIUw4E/Ix49xtjCmXfzLL8nY/ktdgnAKwxxgIoXIyqmAOwvIqfiN0ALNd21HYBO9XXGMAdnZTYyHWzWjQAAAAASUVORK5CYII=";
       const HATS_SPRITE_SHEET =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAAMCAYAAAD2xvZMAAAACXBIWXMAAAsSAAALEgHS3X78AAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAAEeElEQVRYw+2YXWyTVRjHf0/QCxhzY0jIdMi4YLqoQ13NqoCr0USmQKIjRmXRRuLFEhadMYjxI+qNspuRaMQIcxhdJBrhAoWQSGxdJptZ1RlkYwtu2lm3dFu/v8bkeNG9pWvffkzKgtrnpm/ePud9zjnv7/n/TytKKfKRj2yjY99Btb3RDCALUU/ygOYja1hElFKKjn0H2d5ozgOajysHTIBeQzWGXhtKKVmw2v8hQOMXInmscgdnr6EagD6bjR2K/wegs3YhOYXTI1Cku548sJfwntpmd2+h4dQFtKTwWlV6TRnBUJAR19BlmZBmGTkF1CMwUgnl/TFImzvLad04kof0X6KelftuUv2NA5IW0NLiVaqkYHnWgGqwxUjJYgEiogrqThA4/kCuFhxT0A+nH+bpFYdp7ixn3epa+h2n2GMc1AU0fu5KKcm2cRLH5aIh0zlKjt1m3oD22Wyxe5cL0lU7ypS9bVQyKujN19+mgqEgQEZARURNVN/PiM/D8HSIbZ/bkTs9GccYGntwuC7gOHQXObd54K3h2yldVIX5ho9oOX0vu275JiWgP7zTwB1NnwDQ+uh6mj/ryjh/u92Ow+EAoKamJmP+dN8BAj4vyzY8j3IDRXPzRUR12n5mY3VVUqMkfpcLgfgn9h4fuYT0zGvVasXaG+k+dpQtn/oyA7qmpEJpcGbT9fGAjgX87DzmSgupiKiw9T7WfrAHe4ch1wqtZsdouWnPoRqgAH6vG1ufKy2g8XAODUX3p6GhIW2+BqffPUbZhpb4Y4joAQrwbut7uF0eXnnzJQBSASoiarq/Ba8vQCjgIRQKUPHg/pTzWVNSoZYsXgIQc8hUe5p49gRok+h1bW0tABaLRbJ1AL06zo+fUH/+8i1h7wwA350J85zFnd7inZs2qcmpKSIuFwDrhobmBWiTcyTtog2NPQSmF+EPw9TUZFqbFxHVsPsUAL/+NsZMxMv3h59KB6kSEb58disDA2d54cRZDVJJBf2hh9bPecBjX3XpNoOIqJ7KekLBIKOOPwBwnQ8D0MSgLjwAltV1c/J3ugeR4uRn7//iOACR34dxuzx4pnxMTDq5e9sjADxTX5c0BuBkhQFvJIT7rxn8oz6acKTcfw3QeIfUyzWZTMpisWh1Ehs9dm/2U1IBqs3RaDTS3d2dVOfo44Vq5bICAMbHlrL1yLnkfdSKx0/eH/YCMBEaT6tcieqWSeXiAf3xyRdZ/vaujIDeU99KwO8iMnM1AKdPvnrJ9hKvnJp6amHrizZmopImWjuQUkU15QQI+LwX67jHLp65NrckjXm99X0io6PMRC4wMekkGA5SWnUre9/Ynfz8cwdgeiqqnuHzhHzOOT6hp6SbKxqUPxggHIkCGsYPwE/OLkmheOn2kPb2dsxms6RSSRFRRqORLUsrefnrdt33ttdUrJqtHlpri2i2elIDupB/+GYCOlVejs5ZKlpifjXmkX9FPV/LW1l4HYuvKiDe4kMzAcZ9Dt1xJpNJWa3WmJ3rXWey+Pn+mNSLvwHVIEMWWqusngAAAABJRU5ErkJggg==";
+        "data:image/png;base64,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";
 
       // Element IDs
       const FIELD_GUIDE_ID = "birb-field-guide";
