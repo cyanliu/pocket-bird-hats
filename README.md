@@ -1,13 +1,14 @@
 # Custom hats for your pocket bird
+
 ![custom](img/hat-spritesheet-custom.png)
 
 This is a companion repo for the [PB-Obsidian-Releases](https://github.com/idreesinc/PB-Obsidian-Releases) repository, and provides instructions for how to add custom hats to your existing local installation of [pocket-bird on Obsidian](https://community.obsidian.md/plugins/pocket-bird).
 
 In this repository you will find my WIP custom hats:
 
-- `main.js` - a copy of the main.js from the plugin, but with my custom nonsense (so far, just a santa hat and cat ears)
+- `main.js` - a copy of the main.js from the plugin, but with my custom nonsense (so far, just a santa hat, cat ears, and tangerine)
 - `img/hat-spritesheet-base.png` - the png version of the base spritesheet from pocket-bird
-- `img/hat-spritesheet-custom.png` - the png version of the spritesheet but with my custom nonsense (so far, just a santa hat and cat ears)
+- `img/hat-spritesheet-custom.png` - the png version of the spritesheet, but with my custom nonsense (so far, just a santa hat, cat ears, and tangerine)
 - `img/ref_*.png files` - just images that are used here in the readme documentation
 
 ## Making a New Hat
